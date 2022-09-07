@@ -46,9 +46,11 @@ int main()
     Derived * dPtr = new Derived();
     dPtr->show();
 
-    Base * base = new Derived();
 
+    Base * base = new Derived();
+    // with virtual keyword, the binding will happen during the run time.
     base->show();
+    // without virtual keyword, compiler will determine which function to call during the compile time.
     base->display();
 
     return 0;
